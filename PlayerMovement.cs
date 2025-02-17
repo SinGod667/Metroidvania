@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         // Move player left & right
         rb2D.linearVelocity = new Vector2(horizMovement * speed, rb2D.linearVelocity.y);
         Flip(horizMovement);
+        myAnimator.SetFloat("speed", Mathf.Abs(horizMovement));
     }
 
     // Flipping function
